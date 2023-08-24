@@ -1,3 +1,4 @@
+import Loader from "./components/Loader"
 import Product from "./components/Product"
 import { useProducts } from "./hooks/products"
 
@@ -6,7 +7,7 @@ const App = () => {
 
   return (
     <div className='w-full flex flex-col justify-center items-center  '>
-        {loading && <p className="text-center text-[black]">Loading...</p> }
+        {loading && <Loader/> }
         {error && <p className="text-center text-[red]">{error}</p>}
         
       {products.map((el)=><Product product={el} key={el.id}/>) }

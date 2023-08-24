@@ -10,9 +10,9 @@ export function useProducts() {
   
     async function getProducts() {
       try {
-        // setError("")
-        setLoading(true)
-       const response =  await axios.get<Iproduct[]>("https://fakestoreapi2.com/products")
+        setError(" ")
+             setLoading(true)
+       const response =  await axios.get<Iproduct[]>("https://fakestoreapi.com/products")
        console.log(response.data);
       setProducts(response.data)
       setLoading(false)
