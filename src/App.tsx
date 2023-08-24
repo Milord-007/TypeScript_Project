@@ -9,7 +9,7 @@ const App = () => {
         {loading && <p className="text-center text-[black]">Loading...</p> }
         {error && <p className="text-center text-[red]">{error}</p>}
         
-      { products.map((el)=><Product product={el} key={el.id}/>) }
+      {products.map((el)=><Product product={el} key={el.id}/>) }
 
 
     </div>
